@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/png" href="Visu/Favicon.png">
+    <style>
+
+        main{
+            height: 100vh;
+            grid-template-rows: 100%;
+        }
+        .loading{
+            color: rgba(0, 0, 0, 0.78);
+        }
+
+        .projet:nth-child(1){
+            background-image: url(../storage/projects/tranche_de_ville.jpg);
+        }
+        .projet:nth-child(2){
+            background-image: url(../storage/projects/tombe_d_un_nuage_gris.jpg);
+            background-position-y: 30%;
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="loading">
+    <h1>Portfolio Ecriture</h1>
+    <span>loading</span>
+    <div class="spinner"></div>
+</div>
+
+<main>
+    <a href="../storage/projects/tranche_de_ville.pdf" class="projet">
+        <h1>Tranche de ville</h1>
+        <p>
+            Un projet de magazine, réalisé dans le cadre du module de communication du premier semestre en MMI.
+            Il m'a permis de me former à l'utilisation d'InDesign, à la recherche d'informations, et à l'écriture d'articles de magazine.
+        </p>
+    </a>
+
+    <a href="../storage/projects/tombe_d_un_nuage_gris.pdf" class="projet">
+        <p>
+            Scénario d'un cour-métrage d'animation, réalisé lors des cours d'expression écrite et orale.
+            J'y raconte méthaphoriquement l'histoire d'un garcon enfermé à l'hôpital à cause de sa maladie.
+        </p>
+    </a>
+
+</main>
+
+<script>
+
+    setTimeout(function () {
+
+        document.querySelector('.loading').style.opacity = 0;
+
+        setTimeout(function () {
+
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('main').style.pointerEvents = 'all';
+
+        }, 600)
+
+    }, 3000);
+
+</script>
+</body>
+</html></html>

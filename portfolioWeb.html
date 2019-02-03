@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/png" href="Visu/Favicon.png">
+    <style>
+
+        main{
+            height: 100vh;
+            grid-template-rows: 100%;
+        }
+
+        .projet:nth-child(1){
+            background-image: url(../storage/projects/portrait_chinois.png);
+            background-size: 230vh;
+        }
+        .projet:nth-child(2){
+            background-image: url(../storage/projects/cactusvitae.png);
+            -ms-background-position-x: 50%;
+            background-position-x: 48%;
+
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="loading">
+    <h1>Portfolio Web</h1>
+    <span>loading</span>
+    <div class="spinner"></div>
+</div>
+
+<main>
+    <a href="../portraitchinois" class="projet">
+        <h1>Portrait Chinois</h1>
+        <p>
+            Lors du deuxième semestre de DUT MMI, nous avons travaillé sur un projet de portrait chinois.
+            Le projet m'a permis de m'interesser au JavaScript, pour réaliser un site inspiré des jeux vidéo de plateformer
+        </p>
+    </a>
+
+    <a href="../cactusvitae/Views/Accueil.php" class="projet">
+        <h1>Cactus.Vitae</h1>
+        <p>
+            Notre projet tutoré de première année.
+            Le but du site est de faciliter la recherche de stages des étudiants de MMI. Il référence les profils de tous
+            les étudiants de la promotion.
+            Il permet aussi de poster des offres de stage en rapport avec la formation.
+        </p>
+    </a>
+
+</main>
+
+<script>
+
+    setTimeout(function () {
+
+        document.querySelector('.loading').style.opacity = 0;
+
+        setTimeout(function () {
+
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('main').style.pointerEvents = 'all';
+
+        }, 600)
+
+    }, 3000);
+
+</script>
+</body>
+</html>

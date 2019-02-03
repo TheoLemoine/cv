@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/png" href="Visu/Favicon.png">
+    <style>
+
+        .projet:nth-child(1){
+            background-image: url(../storage/projects/compo_cube1.png);
+        }
+        .projet:nth-child(2){
+            background-image: url(../storage/projects/compo_cube2.png);
+        }
+        .projet:nth-child(3){
+            background-image: url(../storage/projects/gif_ronin.gif);
+            background-position-y: 50%;
+        }
+        .projet:nth-child(4){
+            background-image: url(../storage/projects/restoration);
+            background-position-y: 50%;
+        }
+        .projet:nth-child(5){
+            background-image: url(../storage/projects/logos.png);
+        }
+        .projet:nth-child(6){
+            background-image: url(../storage/projects/tranche_de_ville.jpg);
+            background-position-y: center;
+            grid-area: 3 / 2 / 5 / 3;
+        }
+        .projet:nth-child(7){
+            background-image: url(../storage/projects/camel.png);
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="loading">
+    <h1>Portfolio Graphisme</h1>
+    <span>loading</span>
+    <div class="spinner"></div>
+</div>
+
+<main>
+    <a href="../storage/projects/compo_cube2.png" class="projet">
+        <h1>Photo décomposé</h1>
+        <p>
+            Une composition graphique réalisée à partir de deux photos, en interchangeant des carrés d'une image à l'autre
+        </p>
+    </a>
+
+    <a href="../storage/projects/compo_cube1.png" class="projet">
+    </a>
+
+    <a href="../storage/projects/gif_ronin.gif" class="projet">
+        <h1>animation en GIF</h1>
+        <p>
+            Une animation en illustration flat, faite sur photoshop.
+        </p>
+    </a>
+
+    <a href="../storage/projects/restoration.jpg" class="projet">
+        <h1>restoration d'une photo <br>& composition graphique</h1>
+        <p>
+            mon premier essai sur photoshop, m'ayant permis d'apprendre à utiliser une bonne partie des outils simples à disposition
+        </p>
+    </a>
+
+    <a href="../storage/projects/logos.png" class="projet">
+        <h1>Logos</h1>
+        <p>
+            Différents logos, réalisés durant mon temps libre, pour m'entrainer sur Illustrator à la compostition graphique
+        </p>
+    </a>
+
+    <a href="../storage/projects/tranche_de_ville.pdf" class="projet">
+        <h1>Tranche de ville</h1>
+        <p>
+            Un projet de magazine, réalisé dans le cadre du module de communication du premier semestre en MMI.
+            Il m'a permis de me former à l'utilisation d'InDesign, à la recherche d'informations, et à l'écriture d'articles de magazine.
+        </p>
+    </a>
+
+    <a href="../storage/projects/camel.png" class="projet">
+        <h1>Camel</h1>
+        <p>
+            Deal with it.
+        </p>
+    </a>
+
+</main>
+
+<script>
+
+    setTimeout(function () {
+
+        document.querySelector('.loading').style.opacity = 0;
+
+        setTimeout(function () {
+
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('main').style.pointerEvents = 'all';
+
+        }, 600)
+
+    }, 3000);
+
+</script>
+</body>
+</html>

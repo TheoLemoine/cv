@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio.css">
+    <link rel="icon" type="image/png" href="Visu/Favicon.png">
+    <style>
+
+        main{
+            grid-template: repeat(4, 1fr) / repeat(3, 1fr);
+            height: 180vh;
+
+
+        }
+        .projet{
+            background-position: center;
+            font-size: Calc(0.5rem + 0.4vh );
+
+        }
+        .projet:hover{
+            color: white;
+        }
+
+        .projet:nth-child(1){
+            background-image: url(../storage/projects/la_fille_du_quai.png);
+        }
+        .projet:nth-child(2){
+            background-image: url("imagesPortfolio/PhotosPortfolio/1-min.JPG");
+        }
+        .projet:nth-child(3){
+            background-image: url("imagesPortfolio/PhotosPortfolio/2-min.JPG");
+            background-position-y: 50%;
+        }
+        .projet:nth-child(4){
+            background-image: url("imagesPortfolio/PhotosPortfolio/4-min.JPG");
+            background-position-y: 50%;
+            grid-area: 2 / 1 / 4 / 2;
+        }
+        .projet:nth-child(5){
+            background-image: url("imagesPortfolio/PhotosPortfolio/5-min.JPG");
+        }
+        .projet:nth-child(6){
+            background-image: url("imagesPortfolio/PhotosPortfolio/7-min.JPG");
+            background-position-y: 23%;
+            grid-area: 1 / 3 / 3 / 4;
+        }
+        .projet:nth-child(7){
+            background-image: url("imagesPortfolio/PhotosPortfolio/6-min.JPG");
+        }
+        .projet:nth-child(8){
+            background-image: url("imagesPortfolio/PhotosPortfolio/3-min.JPG");
+        }
+        .projet:nth-child(9){
+            background-image: url("imagesPortfolio/PhotosPortfolio/8-min.JPG");
+        }
+        .projet:nth-child(10){
+            background-image: url("imagesPortfolio/PhotosPortfolio/9-min.JPG");
+        }
+
+    </style>
+</head>
+
+
+
+<body>
+
+<div class="loading">
+    <h1>Portfolio Photos</h1>
+    <span>loading</span>
+    <div class="spinner"></div>
+</div>
+
+<main>
+    <a href="../storage/projects/la_fille_du_quai.png" class="projet">
+        <h1>La fille du quai</h1>
+        <p>
+            C'est pas une photo, mais il fallait que je le mette quelque part.
+            Nous avons réalisé en équipe de 6 un cour-métrage dont j'était le caméraman et cadreur
+        </p>
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/1.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/2.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/4.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/5.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/7.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/6.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/3.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/8.JPG" class="projet">
+    </a>
+
+    <a href="imagesPortfolio/PhotosPortfolio/9.JPG" class="projet">
+    </a>
+
+</main>
+
+<script>
+
+    setTimeout(function () {
+
+        document.querySelector('.loading').style.opacity = 0;
+
+        setTimeout(function () {
+
+            document.querySelector('.loading').style.display = 'none';
+            document.querySelector('main').style.pointerEvents = 'all';
+
+        }, 600)
+
+    }, 4000);
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+flex a:before {
+    content: "\f100"; 
+    color: white;
+}
